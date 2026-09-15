@@ -100,7 +100,7 @@ const ShopPage = () => {
         <div className="space-y-2 border-b border-[#12372A]/10 pb-6">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#657A55]">
             <Leaf className="w-3.5 h-3.5 text-[#1F513A]" />
-            <span>Verdora Botanical Conservatory</span>
+            <span>GreenyCup Botanical Conservatory</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#12372A]">
             Botanical Catalog

@@ -13,7 +13,7 @@ const CareJournalPage = () => {
             Botanical Editorial
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#12372A]">
-            The Verdora Plant Care Journal
+            The GreenyCup Plant Care Journal
           </h1>
           <p className="text-xs sm:text-sm text-[#526057]">
             Practical horticultural guides, repotting rituals, and seasonal sunlight wisdom written by our nursery specialists.

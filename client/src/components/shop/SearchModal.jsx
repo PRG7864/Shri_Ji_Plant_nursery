@@ -100,7 +100,7 @@ const SearchModal = ({ isOpen, onClose }) => {
             {/* Title */}
             <div className="text-center mb-6">
               <span className="text-xs font-bold tracking-widest text-[#657A55] uppercase">
-                Verdora Botanical Index
+                GreenyCup Botanical Index
               </span>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#12372A] mt-1">
                 What are you growing?

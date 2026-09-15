@@ -53,8 +53,8 @@ export const createOrder = async (req, res) => {
     const shippingFee = subtotal >= 599 ? 0 : 99;
     const total = Math.max(0, subtotal + shippingFee - discountAmount);
 
-    // Generate unique Verdora Order Number
-    const orderNumber = `VD-${Math.floor(10000 + Math.random() * 90000)}`;
+    // Generate unique GreenyCup Order Number
+    const orderNumber = `GC-${Math.floor(10000 + Math.random() * 90000)}`;
 
     const order = new Order({
       orderNumber,
@@ -65,7 +65,7 @@ export const createOrder = async (req, res) => {
       paymentMethod: paymentMethod || 'UPI',
       paymentStatus: paymentMethod === 'COD' ? 'Pending' : 'Completed',
       paymentDetails: {
-        transactionId: paymentMethod === 'COD' ? 'COD-PAY' : `TXN-VD-${Date.now().toString().slice(-8)}`,
+        transactionId: paymentMethod === 'COD' ? 'COD-PAY' : `TXN-GC-${Date.now().toString().slice(-8)}`,
         paymentDate: new Date()
       },
       subtotal,
@@ -77,7 +77,7 @@ export const createOrder = async (req, res) => {
       trackingTimeline: [
         {
           status: 'Order Placed',
-          message: 'Order received and being prepared by Verdora Nursery specialists.',
+          message: 'Order received and being prepared by GreenyCup Nursery specialists.',
           timestamp: new Date()
         }
       ],

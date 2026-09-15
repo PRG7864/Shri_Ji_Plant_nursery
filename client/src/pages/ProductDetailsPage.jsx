@@ -375,10 +375,10 @@ const ProductDetailsPage = () => {
             {activeTab === 'packaging' && (
               <div className="space-y-4 max-w-3xl text-xs sm:text-sm text-[#526057] leading-relaxed">
                 <h3 className="font-serif text-xl font-bold text-[#12372A]">
-                  Verdora Eco-Armor Transit Guarantee
+                  GreenyCup Eco-Armor Transit Guarantee
                 </h3>
                 <p>
-                  Live plants require specialized care during transportation. Verdora uses custom-designed, corrugated, ventilated boxes with recycled moisture-retention collar locks that keep the root ball secured and foliage buffered from shock.
+                  Live plants require specialized care during transportation. GreenyCup uses custom-designed, corrugated, ventilated boxes with recycled moisture-retention collar locks that keep the root ball secured and foliage buffered from shock.
                 </p>
                 <div className="p-4 rounded-2xl bg-[#FAF8F2] border border-[#12372A]/5 space-y-2">
                   <div className="flex items-center gap-2 text-xs font-bold text-[#12372A]">

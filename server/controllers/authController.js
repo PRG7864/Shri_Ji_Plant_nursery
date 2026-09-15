@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET || 'verdora_jwt_secret_key_2026', {
+  return jwt.sign({ id }, process.env.JWT_SECRET || 'greenycup_jwt_secret_key_2026', {
     expiresIn: '30d',
   });
 };

@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: verdora-nursery-app
+    name: greenycup-nursery-app
     env: node
     plan: free
     buildCommand: npm run build

@@ -35,13 +35,13 @@ const InstaGallery = () => {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-[#657A55]">
             <Camera className="w-4 h-4 text-[#1F513A]" />
-            <span>#VerdoraHomes</span>
+            <span>#GreenyCupHomes</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#12372A] mt-2">
             Living spaces in bloom.
           </h2>
           <p className="text-xs sm:text-sm text-[#526057] mt-2">
-            Tag @VerdoraBotanicals to be featured in our digital conservatory.
+            Tag @GreenyCupBotanicals to be featured in our digital conservatory.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const InstaGallery = () => {
             >
               <img
                 src={item.image}
-                alt="Verdora community garden"
+                alt="GreenyCup community garden"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-80"
               />
               <div className="absolute inset-0 bg-[#12372A]/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center text-[#FCFBF7]">

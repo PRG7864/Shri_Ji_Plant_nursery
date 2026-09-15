@@ -1076,11 +1076,11 @@ export const productsData = [
     badge: 'Aromatic'
   },
 
-  // 25. Verdora Organic Potting Mix 5kg
+  // 25. GreenyCup Organic Potting Mix 5kg
   {
-    name: 'Verdora Botanical Aerated Potting Mix (5 KG)',
+    name: 'GreenyCup Botanical Aerated Potting Mix (5 KG)',
     botanicalName: 'Substrate Blend',
-    slug: 'verdora-organic-potting-mix',
+    slug: 'greenycup-organic-potting-mix',
     categorySlug: 'soil-fertilizers',
     description: 'Professional nursery-grade substrate blended with aged coconut coir, perlite, vermiculite, biochar, vermicompost, and organic neem cake. Pre-sterilized to prevent fungus gnats and root disease.',
     shortDescription: 'Nutrient-rich, fast-draining pre-sterilized potting soil.',
@@ -1690,7 +1690,7 @@ export const reviewsSeedData = [
     userLocation: 'Bengaluru, Karnataka',
     rating: 5,
     title: 'Arrived in museum-grade packaging!',
-    comment: 'I was honestly nervous ordering a live Monstera online, but Verdora’s eco-armor packaging is exceptional. Not a single leaf was bruised or bent. The plant was healthy, glossy, and put out a giant new fenestrated leaf within 2 weeks!',
+    comment: 'I was honestly nervous ordering a live Monstera online, but GreenyCup’s eco-armor packaging is exceptional. Not a single leaf was bruised or bent. The plant was healthy, glossy, and put out a giant new fenestrated leaf within 2 weeks!',
     verifiedBuyer: true
   },
   {
@@ -1698,7 +1698,7 @@ export const reviewsSeedData = [
     userLocation: 'Mumbai, Maharashtra',
     rating: 5,
     title: 'The plant recommendation quiz was spot on',
-    comment: 'I live in an apartment with modest indirect light and two cats. The quiz recommended the Calathea Orbifolia and Spider Plant. Both are thriving beautifully and 100% pet safe. Absolutely love Verdora!',
+    comment: 'I live in an apartment with modest indirect light and two cats. The quiz recommended the Calathea Orbifolia and Spider Plant. Both are thriving beautifully and 100% pet safe. Absolutely love GreenyCup!',
     verifiedBuyer: true
   },
   {

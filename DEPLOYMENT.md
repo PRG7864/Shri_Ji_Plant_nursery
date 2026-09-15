@@ -1,6 +1,6 @@
-# 🌿 VERDORA — Deployment Guide (Vercel & Render)
+# 🌿 GREENYCUP — Deployment Guide (Vercel & Render)
 
-This guide walks you through deploying the **VERDORA** Full-Stack Botanical E-Commerce platform to **Render** and **Vercel**.
+This guide walks you through deploying the **GreenyCup** Full-Stack Botanical E-Commerce platform to **Render** and **Vercel**.
 
 ---
 
@@ -14,15 +14,15 @@ Deploy the entire full-stack app (React frontend + Express backend + Auto-seedin
 3. Click **New +** → **Web Service**.
 4. Connect your GitHub repository.
 5. Configure the settings:
-   - **Name**: `verdora-nursery`
+   - **Name**: `greenycup-nursery`
    - **Environment**: `Node`
    - **Build Command**: `npm run build`
    - **Start Command**: `npm start`
    - **Plan**: `Free`
 6. Under **Environment Variables**, add:
    - `NODE_ENV`: `production`
-   - `JWT_SECRET`: *(Generate any random string, e.g. `verdora_super_secure_secret_2026`)*
-   - `MONGODB_URI`: *(Optional: Your MongoDB Atlas connection string. If omitted, Verdora automatically runs with in-memory Mongo & self-seeds the 40+ products!)*
+   - `JWT_SECRET`: *(Generate any random string, e.g. `greenycup_super_secure_secret_2026`)*
+   - `MONGODB_URI`: *(Optional: Your MongoDB Atlas connection string. If omitted, GreenyCup automatically runs with in-memory Mongo & self-seeds the 40+ products!)*
 7. Click **Deploy Web Service**!
 
 ---
@@ -38,9 +38,9 @@ If you prefer deploying the React client on **Vercel** with global CDN edge perf
    - **Start Command**: `node server.js`
    - **Environment Variables**:
      - `NODE_ENV`: `production`
-     - `JWT_SECRET`: `verdora_jwt_secret_2026`
+     - `JWT_SECRET`: `greenycup_jwt_secret_2026`
      - `MONGODB_URI`: *(Your MongoDB Atlas URI or leave for auto-fallback)*
-2. Note down your backend URL (e.g., `https://verdora-api.onrender.com`).
+2. Note down your backend URL (e.g., `https://greenycup-api.onrender.com`).
 
 ### Step B: Deploy Frontend on Vercel
 1. Log into [Vercel.com](https://vercel.com).
@@ -51,7 +51,7 @@ If you prefer deploying the React client on **Vercel** with global CDN edge perf
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
 4. Under **Environment Variables**, add:
-   - `VITE_API_BASE_URL`: `https://verdora-api.onrender.com/api` *(Your Render backend URL + `/api`)*
+   - `VITE_API_BASE_URL`: `https://greenycup-api.onrender.com/api` *(Your Render backend URL + `/api`)*
 5. Click **Deploy**!
 
 ---
@@ -62,9 +62,9 @@ If you prefer deploying the React client on **Vercel** with global CDN edge perf
 | :--- | :--- | :--- | :--- |
 | `NODE_ENV` | Yes (Server) | Sets environment mode | `production` |
 | `PORT` | Auto on Render | Server port | `10000` or `5001` |
-| `JWT_SECRET` | Yes (Server) | Secret for JWT token generation | `verdora_secret_key_2026` |
+| `JWT_SECRET` | Yes (Server) | Secret for JWT token generation | `greenycup_secret_key_2026` |
 | `MONGODB_URI` | Optional (Server) | MongoDB Atlas connection string | `mongodb+srv://...` |
-| `VITE_API_BASE_URL` | Optional (Vercel) | Custom backend endpoint if hosted separately | `https://verdora-api.onrender.com/api` |
+| `VITE_API_BASE_URL` | Optional (Vercel) | Custom backend endpoint if hosted separately | `https://greenycup-api.onrender.com/api` |
 
 ---
 

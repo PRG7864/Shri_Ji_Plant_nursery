@@ -36,7 +36,7 @@ const WhyUs = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#657A55]">
-            The Verdora Promise
+            The GreenyCup Promise
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#12372A] mt-2">
             Why green spaces start with us.

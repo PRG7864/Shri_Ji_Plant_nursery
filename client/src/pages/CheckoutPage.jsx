@@ -34,7 +34,7 @@ const CheckoutPage = () => {
   });
 
   const [paymentMethod, setPaymentMethod] = useState('UPI');
-  const [upiId, setUpiId] = useState('verdora@okhdfcbank');
+  const [upiId, setUpiId] = useState('greenycup@okhdfcbank');
   const [cardDetails, setCardDetails] = useState({ number: '', expiry: '', cvv: '', name: '' });
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState('');

@@ -28,7 +28,7 @@ const AccountPage = () => {
   const [saveSuccess, setSaveSuccess] = useState(false);
 
   useEffect(() => {
-    if (!isAuthenticated && !localStorage.getItem('verdora_token')) {
+    if (!isAuthenticated && !localStorage.getItem('greenycup_token')) {
       navigate('/login?redirect=/account');
       return;
     }

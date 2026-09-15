@@ -16,7 +16,7 @@ const AboutPage = () => {
             We believe every home deserves living beauty.
           </h1>
           <p className="text-xs sm:text-sm md:text-base text-[#526057] leading-relaxed">
-            Founded with a vision to connect modern urban living with nature’s restorative power, Verdora cultivates healthy botanical specimens and delivers them safely across India in custom eco-protective armor.
+            Founded with a vision to connect modern urban living with nature’s restorative power, GreenyCup cultivates healthy botanical specimens and delivers them safely across India in custom eco-protective armor.
           </p>
         </div>
 
@@ -24,7 +24,7 @@ const AboutPage = () => {
         <div className="relative rounded-[3rem] overflow-hidden aspect-[16/9] shadow-2xl border-4 border-[#FCFBF7] bg-[#12372A]">
           <img
             src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80"
-            alt="Verdora Greenhouse Nursery"
+            alt="GreenyCup Greenhouse Nursery"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#12372A]/80 via-transparent to-transparent" />

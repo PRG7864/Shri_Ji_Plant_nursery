@@ -6,7 +6,7 @@ const testimonialsData = [
     name: 'Dr. Radhika Kulkarni',
     city: 'Pune, Maharashtra',
     plantBought: 'Monstera Deliciosa & Fluted Pots',
-    text: 'The packaging was sheer perfection. Not a single drop of soil spilled, and the fenestrated leaves were glossy and immaculate. Verdora has set a new gold standard for online plant nurseries in India.',
+    text: 'The packaging was sheer perfection. Not a single drop of soil spilled, and the fenestrated leaves were glossy and immaculate. GreenyCup has set a new gold standard for online plant nurseries in India.',
     rating: 5
   },
   {

@@ -12,7 +12,7 @@ dotenv.config();
 
 export const seedDatabase = async () => {
   try {
-    console.log('🌱 Starting Verdora Database Seeding...');
+    console.log('🌱 Starting GreenyCup Database Seeding...');
     
     // Clear existing collections
     await Category.deleteMany({});
@@ -23,13 +23,13 @@ export const seedDatabase = async () => {
 
     // Seed Demo Users
     const adminUser = await User.create({
-      name: 'Verdora Curator (Admin)',
-      email: 'admin@verdora.com',
+      name: 'GreenyCup Curator (Admin)',
+      email: 'admin@greenycup.com',
       password: 'admin123',
       phone: '+91 98765 43210',
       role: 'admin',
       addresses: [{
-        fullName: 'Verdora Botanical HQ',
+        fullName: 'GreenyCup Botanical HQ',
         phone: '+91 98765 43210',
         addressLine1: '42 Greenhouse Boulevard, Indiranagar',
         city: 'Bengaluru',
@@ -41,7 +41,7 @@ export const seedDatabase = async () => {
 
     const customerUser = await User.create({
       name: 'Aarav Mehta',
-      email: 'customer@verdora.com',
+      email: 'customer@greenycup.com',
       password: 'customer123',
       phone: '+91 98111 22334',
       role: 'customer',
@@ -57,7 +57,7 @@ export const seedDatabase = async () => {
       }]
     });
 
-    console.log('👥 Demo Users Created: admin@verdora.com / customer@verdora.com');
+    console.log('👥 Demo Users Created: admin@greenycup.com / customer@greenycup.com');
 
     // Seed Categories
     const createdCategories = await Category.insertMany(categoriesData);
@@ -106,7 +106,7 @@ export const seedDatabase = async () => {
     const sampleProduct1 = createdProducts[0];
     const sampleProduct2 = createdProducts[2];
     await Order.create({
-      orderNumber: 'VD-10293',
+      orderNumber: 'GC-10293',
       user: customerUser._id,
       items: [
         {
@@ -135,24 +135,24 @@ export const seedDatabase = async () => {
       paymentMethod: 'UPI',
       paymentStatus: 'Completed',
       paymentDetails: {
-        transactionId: 'UPI-VD-98716298371'
+        transactionId: 'UPI-GC-98716298371'
       },
       subtotal: sampleProduct1.price + (sampleProduct2.price * 2),
       shippingFee: 0,
       discountAmount: 100,
-      couponCode: 'VERDORA100',
+      couponCode: 'GREENYCUP100',
       total: sampleProduct1.price + (sampleProduct2.price * 2) - 100,
       orderStatus: 'Shipped',
       trackingTimeline: [
-        { status: 'Order Placed', message: 'Order received and confirmed by Verdora Nursery', timestamp: new Date(Date.now() - 2 * 86400000) },
+        { status: 'Order Placed', message: 'Order received and confirmed by GreenyCup Nursery', timestamp: new Date(Date.now() - 2 * 86400000) },
         { status: 'Packed', message: 'Specimens carefully inspected & secured in Eco-Armor packaging', timestamp: new Date(Date.now() - 1 * 86400000) },
-        { status: 'Shipped', message: 'Dispatched via Verdora Green Express (Tracking #VD-EX-99182)', timestamp: new Date() }
+        { status: 'Shipped', message: 'Dispatched via GreenyCup Green Express (Tracking #GC-EX-99182)', timestamp: new Date() }
       ],
       estimatedDelivery: new Date(Date.now() + 2 * 86400000)
     });
 
-    console.log('📦 Sample Demo Order Created (VD-10293)');
-    console.log('✨ Verdora Seeding Completed Successfully!');
+    console.log('📦 Sample Demo Order Created (GC-10293)');
+    console.log('✨ GreenyCup Seeding Completed Successfully!');
     return true;
   } catch (error) {
     console.error('❌ Error in Database Seeding:', error);

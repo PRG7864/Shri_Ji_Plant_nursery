@@ -119,7 +119,7 @@ const FlashSale = () => {
                   <Tag className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-[#FCFBF7]">Use Code: VERDORA20</div>
+                  <div className="text-xs font-bold text-[#FCFBF7]">Use Code: GREENYCUP20</div>
                   <div className="text-[11px] text-[#8FAF91]">Extra 20% OFF at Checkout</div>
                 </div>
               </div>

@@ -9,14 +9,14 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const token = localStorage.getItem('verdora_token');
+      const token = localStorage.getItem('greenycup_token');
       if (token) {
         try {
           const profile = await api.getMe();
           setUser(profile);
         } catch (error) {
           console.error('Session expired:', error.message);
-          localStorage.removeItem('verdora_token');
+          localStorage.removeItem('greenycup_token');
           setUser(null);
         }
       }
@@ -28,20 +28,20 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     const data = await api.login({ email, password });
-    localStorage.setItem('verdora_token', data.token);
+    localStorage.setItem('greenycup_token', data.token);
     setUser(data);
     return data;
   };
 
   const register = async (userData) => {
     const data = await api.register(userData);
-    localStorage.setItem('verdora_token', data.token);
+    localStorage.setItem('greenycup_token', data.token);
     setUser(data);
     return data;
   };
 
   const logout = () => {
-    localStorage.removeItem('verdora_token');
+    localStorage.removeItem('greenycup_token');
     setUser(null);
   };
 

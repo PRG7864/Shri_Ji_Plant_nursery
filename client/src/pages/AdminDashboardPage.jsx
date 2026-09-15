@@ -191,7 +191,7 @@ const AdminDashboardPage = () => {
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1F513A]">
               <ShieldCheck className="w-4 h-4 text-[#1F513A]" />
-              <span>Verdora Curator Portal</span>
+              <span>GreenyCup Curator Portal</span>
             </div>
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#12372A]">
               Nursery Management Dashboard

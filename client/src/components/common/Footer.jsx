@@ -59,23 +59,23 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="inline-block">
               <span className="font-serif text-3xl font-bold tracking-[0.18em] text-[#FCFBF7] uppercase">
-                VERDORA
+                GREENYCUP
               </span>
               <span className="block text-xs tracking-[0.25em] text-[#8FAF91] uppercase font-sans font-medium mt-1">
                 Bring life home
               </span>
             </Link>
             <p className="text-xs text-[#8FAF91] leading-relaxed max-w-sm">
-              Verdora is India’s next-generation digital botanical nursery. We cultivate healthy, living plant specimens and ship them straight from our greenhouses to your doorstep in eco-friendly protective packaging.
+              GreenyCup is India’s next-generation digital botanical nursery. We cultivate healthy, living plant specimens and ship them straight from our greenhouses to your doorstep in eco-friendly protective packaging.
             </p>
             <div className="flex items-center gap-3 pt-2 text-[#8FAF91]">
-              <a href="#instagram" aria-label="Verdora on Instagram" className="p-2 bg-[#1F513A]/40 rounded-full hover:bg-[#8FAF91] hover:text-[#12372A] transition-colors">
+              <a href="#instagram" aria-label="GreenyCup on Instagram" className="p-2 bg-[#1F513A]/40 rounded-full hover:bg-[#8FAF91] hover:text-[#12372A] transition-colors">
                 <Camera className="w-4 h-4" />
               </a>
-              <a href="#youtube" aria-label="Verdora on YouTube" className="p-2 bg-[#1F513A]/40 rounded-full hover:bg-[#8FAF91] hover:text-[#12372A] transition-colors">
+              <a href="#youtube" aria-label="GreenyCup on YouTube" className="p-2 bg-[#1F513A]/40 rounded-full hover:bg-[#8FAF91] hover:text-[#12372A] transition-colors">
                 <Video className="w-4 h-4" />
               </a>
-              <a href="#community" aria-label="Verdora Community" className="p-2 bg-[#1F513A]/40 rounded-full hover:bg-[#8FAF91] hover:text-[#12372A] transition-colors">
+              <a href="#community" aria-label="GreenyCup Community" className="p-2 bg-[#1F513A]/40 rounded-full hover:bg-[#8FAF91] hover:text-[#12372A] transition-colors">
                 <Globe className="w-4 h-4" />
               </a>
             </div>
@@ -127,7 +127,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#8FAF91] shrink-0" />
-                <span>care@verdora.com</span>
+                <span>care@greenycup.com</span>
               </div>
               <div className="pt-2">
                 <Link
@@ -144,7 +144,7 @@ const Footer = () => {
         {/* Bottom Copyright and Legal */}
         <div className="pt-8 border-t border-[#1F513A]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8FAF91]">
           <div>
-            © {new Date().getFullYear()} VERDORA Botanical Nursery Private Limited. All rights reserved.
+            © {new Date().getFullYear()} GREENYCUP Botanical Nursery Private Limited. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <Link to="/about" className="hover:text-[#FCFBF7]">Sustainability</Link>

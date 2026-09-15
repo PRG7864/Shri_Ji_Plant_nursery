@@ -31,10 +31,10 @@ const LoginPage = () => {
 
   const handleFillDemo = (type) => {
     if (type === 'admin') {
-      setEmail('admin@verdora.com');
+      setEmail('admin@greenycup.com');
       setPassword('admin123');
     } else {
-      setEmail('customer@verdora.com');
+      setEmail('customer@greenycup.com');
       setPassword('customer123');
     }
   };
@@ -48,7 +48,7 @@ const LoginPage = () => {
             <Leaf className="w-6 h-6" />
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#12372A]">
-            Sign in to Verdora
+            Sign in to GreenyCup
           </h2>
           <p className="text-xs text-[#526057]">
             Access your saved botanical garden, track shipments, and consult plant doctors.

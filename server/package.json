@@ -1,7 +1,7 @@
 {
-  "name": "verdora-server",
+  "name": "greenycup-server",
   "version": "1.0.0",
-  "description": "Backend API for Verdora Botanical E-Commerce",
+  "description": "Backend API for GreenyCup Botanical E-Commerce",
   "main": "server.js",
   "type": "module",
   "scripts": {

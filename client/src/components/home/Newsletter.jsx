@@ -46,7 +46,7 @@ const Newsletter = () => {
                   className="p-4 rounded-2xl bg-[#1F513A]/60 border border-[#8FAF91]/40 flex items-center justify-center gap-3 text-sm text-[#FCFBF7]"
                 >
                   <CheckCircle2 className="w-5 h-5 text-[#8FAF91]" />
-                  <span>Welcome to the Verdora Conservatory! Check your inbox for a 10% welcome gift.</span>
+                  <span>Welcome to the GreenyCup Conservatory! Check your inbox for a 10% welcome gift.</span>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-2 max-w-md mx-auto">

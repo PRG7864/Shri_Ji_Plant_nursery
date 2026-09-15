@@ -1,7 +1,7 @@
 {
-  "name": "verdora-nursery-ecommerce",
+  "name": "greenycup-nursery-ecommerce",
   "version": "1.0.0",
-  "description": "VERDORA - Premium Full-Stack Botanical E-Commerce Website",
+  "description": "GreenyCup - Premium Full-Stack Botanical E-Commerce Website",
   "main": "server/server.js",
   "type": "module",
   "scripts": {

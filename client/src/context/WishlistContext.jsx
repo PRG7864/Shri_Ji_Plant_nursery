@@ -8,7 +8,7 @@ export const WishlistProvider = ({ children }) => {
   const { user, isAuthenticated } = useAuth();
   const [wishlistItems, setWishlistItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('verdora_wishlist');
+      const saved = localStorage.getItem('greenycup_wishlist');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -25,7 +25,7 @@ export const WishlistProvider = ({ children }) => {
   // Persist locally
   useEffect(() => {
     try {
-      localStorage.setItem('verdora_wishlist', JSON.stringify(wishlistItems));
+      localStorage.setItem('greenycup_wishlist', JSON.stringify(wishlistItems));
     } catch (e) {
       console.error('Failed to save wishlist:', e);
     }

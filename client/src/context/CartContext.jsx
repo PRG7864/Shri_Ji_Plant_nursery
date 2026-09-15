@@ -8,7 +8,7 @@ const DEFAULT_SHIPPING_FEE = 99;
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('verdora_cart');
+      const saved = localStorage.getItem('greenycup_cart');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     try {
-      localStorage.setItem('verdora_cart', JSON.stringify(cartItems));
+      localStorage.setItem('greenycup_cart', JSON.stringify(cartItems));
     } catch (e) {
       console.error('Failed to save cart:', e);
     }
@@ -122,16 +122,16 @@ export const CartProvider = ({ children }) => {
       setCoupon({ code: 'GREEN10', type: 'percentage', value: 10, description: '10% Botanical Discount' });
       showToast('🌿 Promo code GREEN10 applied: 10% OFF!');
       return { success: true };
-    } else if (cleanCode === 'VERDORA20') {
-      setCoupon({ code: 'VERDORA20', type: 'percentage', value: 20, description: '20% Green Week Discount' });
-      showToast('🌿 Promo code VERDORA20 applied: 20% OFF!');
+    } else if (cleanCode === 'GREENYCUP20' || cleanCode === 'VERDORA20') {
+      setCoupon({ code: 'GREENYCUP20', type: 'percentage', value: 20, description: '20% Green Week Discount' });
+      showToast('🌿 Promo code GREENYCUP20 applied: 20% OFF!');
       return { success: true };
-    } else if (cleanCode === 'VERDORA100') {
-      setCoupon({ code: 'VERDORA100', type: 'fixed', value: 100, description: '₹100 Welcome Discount' });
-      showToast('🌿 Promo code VERDORA100 applied: ₹100 OFF!');
+    } else if (cleanCode === 'GREENYCUP100' || cleanCode === 'VERDORA100') {
+      setCoupon({ code: 'GREENYCUP100', type: 'fixed', value: 100, description: '₹100 Welcome Discount' });
+      showToast('🌿 Promo code GREENYCUP100 applied: ₹100 OFF!');
       return { success: true };
     } else {
-      return { success: false, message: 'Invalid coupon code. Try GREEN10, VERDORA20, or VERDORA100' };
+      return { success: false, message: 'Invalid coupon code. Try GREEN10, GREENYCUP20, or GREENYCUP100' };
     }
   };
 

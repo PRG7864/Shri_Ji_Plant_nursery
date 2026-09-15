@@ -1,7 +1,7 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 const getAuthHeaders = () => {
-  const token = localStorage.getItem('verdora_token');
+  const token = localStorage.getItem('greenycup_token');
   return {
     'Content-Type': 'application/json',
     ...(token ? { Authorization: `Bearer ${token}` } : {})

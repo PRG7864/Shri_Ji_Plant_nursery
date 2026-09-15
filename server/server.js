@@ -47,7 +47,7 @@ app.use('/api/quiz', quizRoutes);
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'healthy',
-    brand: 'VERDORA',
+    brand: 'GREENYCUP',
     tagline: 'Bring life home.',
     env: process.env.NODE_ENV || 'development',
     timestamp: new Date().toISOString()
@@ -82,12 +82,12 @@ const startServer = async () => {
     // Auto-seed if database is freshly initialized or empty
     const productCount = await Product.countDocuments();
     if (productCount === 0) {
-      console.log('🌱 Database is empty. Auto-seeding Verdora catalog...');
+      console.log('🌱 Database is empty. Auto-seeding GreenyCup catalog...');
       await seedDatabase();
     }
 
     app.listen(PORT, () => {
-      console.log(`🌿 Verdora Botanical Server running on port ${PORT}`);
+      console.log(`🌿 GreenyCup Botanical Server running on port ${PORT}`);
     });
   } catch (error) {
     console.error(`❌ Failed to start server: ${error.message}`);

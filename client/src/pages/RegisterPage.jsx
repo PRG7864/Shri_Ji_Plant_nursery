@@ -58,7 +58,7 @@ const RegisterPage = () => {
             Create an Account
           </h2>
           <p className="text-xs text-[#526057]">
-            Join the Verdora botanical community and get 10% off your first nursery order.
+            Join the GreenyCup botanical community and get 10% off your first nursery order.
           </p>
         </div>
 

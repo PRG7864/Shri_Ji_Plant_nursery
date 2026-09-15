@@ -233,7 +233,7 @@ const Navbar = ({ onOpenSearch }) => {
               <Link to="/" className="inline-block group">
                 <div className="flex items-center justify-center gap-1.5">
                   <span className="font-serif text-2xl sm:text-3xl font-bold tracking-[0.18em] text-[#12372A] group-hover:text-[#1F513A] transition-colors uppercase">
-                    VERDORA
+                    GREENYCUP
                   </span>
                   <div className="w-2 h-2 rounded-full bg-[#8FAF91] mb-1 group-hover:scale-125 transition-transform" />
                 </div>
@@ -404,7 +404,7 @@ const Navbar = ({ onOpenSearch }) => {
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-[#12372A]/10">
                 <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="font-serif text-xl font-bold text-[#12372A]">
-                  VERDORA
+                  GREENYCUP
                 </Link>
                 <button
                   type="button"
@@ -475,7 +475,7 @@ const Navbar = ({ onOpenSearch }) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block py-2 text-[#526057]"
                 >
-                  About Verdora
+                  About GreenyCup
                 </Link>
 
                 <Link

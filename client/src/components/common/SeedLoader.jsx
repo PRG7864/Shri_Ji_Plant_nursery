@@ -50,7 +50,7 @@ const SeedLoader = () => {
           className="text-center mt-4 space-y-1"
         >
           <div className="font-serif text-2xl tracking-[0.25em] font-bold text-[#12372A] uppercase">
-            VERDORA
+            GREENYCUP
           </div>
           <div className="text-xs text-[#657A55] tracking-widest uppercase font-medium">
             Cultivating your digital garden...

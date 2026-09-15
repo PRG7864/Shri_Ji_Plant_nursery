@@ -4,7 +4,7 @@ import { MongoMemoryServer } from 'mongodb-memory-server';
 let mongoMemoryServer = null;
 
 export const connectDB = async () => {
-  const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/verdora_db';
+  const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/greenycup_db';
   
   try {
     // Attempt connecting to local/provided MongoDB URI with short timeout

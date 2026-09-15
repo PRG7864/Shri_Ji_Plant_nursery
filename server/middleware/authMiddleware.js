@@ -10,7 +10,7 @@ export const protect = async (req, res, next) => {
   ) {
     try {
       token = req.headers.authorization.split(' ')[1];
-      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'verdora_jwt_secret_key_2026');
+      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'greenycup_jwt_secret_key_2026');
       req.user = await User.findById(decoded.id).select('-password');
       
       if (!req.user) {
@@ -36,7 +36,7 @@ export const optionalAuth = async (req, res, next) => {
   ) {
     try {
       const token = req.headers.authorization.split(' ')[1];
-      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'verdora_jwt_secret_key_2026');
+      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'greenycup_jwt_secret_key_2026');
       req.user = await User.findById(decoded.id).select('-password');
     } catch (error) {
       // ignore error for optional auth

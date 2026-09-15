@@ -29,7 +29,7 @@ const ContactPage = () => {
           {/* Left: Contact Info */}
           <div className="md:col-span-5 bg-[#FCFBF7] rounded-3xl p-8 border border-[#12372A]/10 space-y-6 shadow-sm">
             <h3 className="font-serif font-bold text-xl text-[#12372A]">
-              Verdora Nursery HQ
+              GreenyCup Nursery HQ
             </h3>
 
             <div className="space-y-4 text-xs text-[#526057]">
@@ -59,7 +59,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <strong className="text-[#12372A] block">Email Support</strong>
-                  <span>care@verdora.com</span>
+                  <span>care@greenycup.com</span>
                 </div>
               </div>
             </div>
