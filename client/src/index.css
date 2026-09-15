@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest-900: #0E281E;
+    --color-forest-800: #12372A;
+    --color-forest-600: #1F513A;
+    --color-sage: #8FAF91;
+    --color-moss: #657A55;
+    --color-cream: #F5F1E7;
+    --color-cream-light: #FAF8F2;
+    --color-warm-white: #FCFBF7;
+    --color-charcoal: #18201B;
+    --color-earth: #A47752;
+    --color-terracotta: #C86D51;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+  background: rgba(245, 241, 231, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(18, 55, 42, 0.08);
+}
+
+.glass-card {
+  background: rgba(252, 251, 247, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(18, 55, 42, 0.08);
+}
+
+.glass-card-dark {
+  background: rgba(18, 55, 42, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(143, 175, 145, 0.2);
+}
+
+.glass-drawer {
+  background: rgba(250, 248, 242, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Botanical Noise / Texture Overlay */
+.bg-botanical-pattern {
+  background-image: radial-gradient(rgba(143, 175, 145, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F1E7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B2C9B4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8FAF91;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Cursor Rules */
+@media (pointer: fine) {
+  .custom-cursor-none {
+    cursor: none !important;
+  }
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
