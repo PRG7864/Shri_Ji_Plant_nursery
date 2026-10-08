@@ -40,8 +40,8 @@ const orderSchema = new mongoose.Schema(
     },
     paymentMethod: {
       type: String,
-      enum: ['UPI', 'Card', 'Netbanking', 'COD'],
-      default: 'UPI',
+      enum: ['Razorpay', 'UPI', 'Card', 'Netbanking', 'COD'],
+      default: 'Razorpay',
     },
     paymentStatus: {
       type: String,
@@ -50,6 +50,9 @@ const orderSchema = new mongoose.Schema(
     },
     paymentDetails: {
       transactionId: { type: String },
+      razorpayOrderId: { type: String },
+      razorpayPaymentId: { type: String },
+      razorpaySignature: { type: String },
       paymentDate: { type: Date, default: Date.now }
     },
     subtotal: { type: Number, required: true },
