@@ -204,6 +204,36 @@ export const api = {
     return data;
   },
 
+  // Payment & Razorpay
+  async getRazorpayKey() {
+    const res = await fetch(`${API_BASE_URL}/payment/razorpay-key`);
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Failed to fetch payment config');
+    return data;
+  },
+
+  async createRazorpayOrder(orderPayload) {
+    const res = await fetch(`${API_BASE_URL}/payment/razorpay/create-order`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(orderPayload)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Failed to initialize payment');
+    return data;
+  },
+
+  async verifyRazorpayPayment(paymentPayload) {
+    const res = await fetch(`${API_BASE_URL}/payment/razorpay/verify`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(paymentPayload)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Failed to verify payment');
+    return data;
+  },
+
   // Quiz Recommendations
   async getQuizRecommendations(answers) {
     const res = await fetch(`${API_BASE_URL}/quiz/recommend`, {

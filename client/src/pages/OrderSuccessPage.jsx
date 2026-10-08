@@ -66,8 +66,34 @@ const OrderSuccessPage = () => {
             Our greenhouse team is hand-inspecting and packing your botanical specimens in Eco-Armor transit protection.
           </p>
 
+          {/* Payment & Order Summary Details */}
+          {order && (
+            <div className="p-5 rounded-2xl bg-[#FAF8F2] border border-[#12372A]/8 text-left space-y-3 mt-6">
+              <div className="flex items-center justify-between pb-2 border-b border-[#12372A]/10 text-xs">
+                <span className="font-bold text-[#12372A]">Payment Method:</span>
+                <span className="font-semibold text-[#1F513A] bg-[#8FAF91]/20 px-2.5 py-0.5 rounded-full">
+                  {order.paymentMethod || 'Razorpay'} ({order.paymentStatus || 'Completed'})
+                </span>
+              </div>
+              {order.paymentDetails?.transactionId && (
+                <div className="flex items-center justify-between text-xs text-[#526057]">
+                  <span>Transaction ID:</span>
+                  <span className="font-mono font-medium text-[#18201B]">{order.paymentDetails.transactionId}</span>
+                </div>
+              )}
+              <div className="flex items-center justify-between text-xs text-[#526057]">
+                <span>Total Paid:</span>
+                <span className="font-serif font-bold text-[#12372A] text-sm">₹{order.total}</span>
+              </div>
+              <div className="flex items-center justify-between text-xs text-[#526057]">
+                <span>Recipient:</span>
+                <span className="font-medium text-[#18201B]">{order.shippingAddress?.fullName} • {order.shippingAddress?.city}</span>
+              </div>
+            </div>
+          )}
+
           {/* Plant Care Starter Advice Box */}
-          <div className="p-5 rounded-2xl bg-[#FAF8F2] border border-[#12372A]/8 text-left space-y-2 mt-6">
+          <div className="p-5 rounded-2xl bg-[#FAF8F2] border border-[#12372A]/8 text-left space-y-2 mt-4">
             <div className="flex items-center gap-2 text-xs font-bold text-[#12372A]">
               <Sparkles className="w-4 h-4 text-[#A47752]" />
               <span>Plant Arrival Care Protocol:</span>
