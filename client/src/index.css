@@ -18,7 +18,7 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 
   body {
@@ -95,12 +95,6 @@
   scrollbar-width: none;
 }
 
-/* Custom Cursor Rules */
-@media (pointer: fine) {
-  .custom-cursor-none {
-    cursor: none !important;
-  }
-}
 
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {

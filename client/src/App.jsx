@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 
 import AnnouncementBar from './components/common/AnnouncementBar';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
-import CustomCursor from './components/common/CustomCursor';
 import SeedLoader from './components/common/SeedLoader';
 import Toast from './components/common/Toast';
 import SearchModal from './components/shop/SearchModal';
@@ -32,6 +32,7 @@ function App() {
   const [isInitialLoading, setIsInitialLoading] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
+  const lenisRef = useRef(null);
 
   // Initialize Lenis Smooth Scroll
   useEffect(() => {
@@ -46,8 +47,13 @@ function App() {
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.5,
+      infinite: false,
     });
+
+    lenisRef.current = lenis;
+    window.lenis = lenis;
 
     function raf(time) {
       lenis.raf(time);
@@ -58,6 +64,8 @@ function App() {
     return () => {
       cancelAnimationFrame(reqId);
       lenis.destroy();
+      lenisRef.current = null;
+      window.lenis = null;
     };
   }, []);
 
@@ -69,16 +77,19 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Scroll to top on route change
+  // Scroll to top smoothly on route change
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [location.pathname]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F5F1E7] text-[#18201B] relative">
       {isInitialLoading && <SeedLoader />}
 
-      <CustomCursor />
       <Toast />
       <AnnouncementBar />
       <Navbar onOpenSearch={() => setIsSearchOpen(true)} />
